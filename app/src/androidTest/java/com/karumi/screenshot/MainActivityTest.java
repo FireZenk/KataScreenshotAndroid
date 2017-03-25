@@ -61,6 +61,14 @@ public class MainActivityTest extends ScreenshotTest {
     compareScreenshot(activity);
   }
 
+  @Test public void showsFilledCaseIfThereAreOneSuperHeroes() {
+    givenThereAreSomeSuperHeroes(1, true);
+
+    Activity activity = startActivity();
+
+    compareScreenshot(activity);
+  }
+
   @Test public void showsFilledCaseIfThereAreSomeSuperHeroes() {
     givenThereAreSomeSuperHeroes(10, true);
 
